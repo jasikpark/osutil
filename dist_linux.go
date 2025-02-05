@@ -1,7 +1,6 @@
 package osutil
 
 import (
-	"io/ioutil"
 	"os"
 	"os/exec"
 	"strings"
@@ -63,7 +62,7 @@ func getLSB() (map[string]string, bool) {
 func getOSRelease() (map[string]string, bool) {
 	osmap := make(map[string]string)
 
-	raw, err := ioutil.ReadFile("/etc/os-release")
+	raw, err := os.ReadFile("/etc/os-release")
 
 	if err != nil {
 		return osmap, false
