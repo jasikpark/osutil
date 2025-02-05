@@ -1,3 +1,3 @@
-module github.com/wille/osutil
+module github.com/jasikpark/osutil
 
 go 1.12
